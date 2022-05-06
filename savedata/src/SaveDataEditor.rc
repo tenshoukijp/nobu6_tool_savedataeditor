@@ -1,0 +1,325 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "名前を付けて保存(&A)...",             ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&x)",                      ID_APP_EXIT
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        POPUP "信長の野望 天翔記"
+        BEGIN
+            MENUITEM "石高 上限",                       ID_MAX_GRAIN
+            MENUITEM "商業 上限",                       ID_MAX_TOWN
+            MENUITEM "城郭 上限",                       ID_MAX_BUILD
+            MENUITEM "民忠 上限",                       ID_MAX_LOYAL
+            MENUITEM SEPARATOR
+            MENUITEM "熟練度 上限",                      ID_MAX_EXP
+            MENUITEM "熟練度 年相応",                     ID_CALC_EXP
+            MENUITEM "熟練度 年相応(低下無し)",               ID_CALC_EXP2
+            MENUITEM SEPARATOR
+            MENUITEM "10年若返り\tCtrl+Y",              ID_YOUNG
+            MENUITEM "兵雇用",                         ID_SOLDIER
+            MENUITEM "年功",                          ID_SENIORITY
+            MENUITEM SEPARATOR
+            MENUITEM "仕官大名変更...",                   ID_CHANGEATTACH
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "すべて選択(&A)\tCtrl+A",           ID_SELECTALL
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "ステータスバー(&S)",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SaveDataEditor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    CTEXT           "SaveDataEditor Application v1.302\n\n(c) Copyright 2016",IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,20,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+END
+
+IDD_NB6SLOT DIALOGEX 0, 0, 215, 169
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION
+CAPTION "データ読み込み"
+FONT 9, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    DEFPUSHBUTTON   "実行",IDOK,50,19,50,14
+    PUSHBUTTON      "取り消し",IDCANCEL,116,19,50,14
+    PUSHBUTTON      "Button1",IDC_SLOT1,7,36,201,14
+    PUSHBUTTON      "Button2",IDC_SLOT2,7,52,201,14
+    PUSHBUTTON      "Button3",IDC_SLOT3,7,68,201,14
+    PUSHBUTTON      "Button4",IDC_SLOT4,7,84,201,14
+    PUSHBUTTON      "Button5",IDC_SLOT5,7,100,201,14
+    PUSHBUTTON      "Button6",IDC_SLOT6,7,116,201,14
+    PUSHBUTTON      "Button7",IDC_SLOT7,7,132,201,14
+    PUSHBUTTON      "Button8",IDC_SLOT8,7,148,201,14
+    LTEXT           "どのデータを読み込みますか",IDC_STATIC,11,7,197,8
+END
+
+IDD_ATTACHDLG DIALOGEX 0, 0, 271, 157
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "閉じる(&C)",IDOK,208,129,50,14
+    COMBOBOX        IDC_COMBO2,145,7,119,169,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST1,7,7,129,143,LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "コンボボックスを変更するとリストボックスで選択されている項目がすべて書き換えられます",IDC_STATIC,145,29,119,40
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_NB6SLOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_ATTACHDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "D",            ID_DUMP,                VIRTKEY, SHIFT, CONTROL, ALT, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_SELECTALL,           VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         ID_TABCHANGE,           VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_YOUNG,               VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_TEST,                VIRTKEY, SHIFT, CONTROL, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,3,0,2
+ PRODUCTVERSION 1,3,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "天翔記 セーブデータエディタ"
+            VALUE "FileVersion", "1.3.0.2"
+            VALUE "InternalName", "SaveDataEditor"
+            VALUE "LegalCopyright", "(C) 2016 天翔記スレ名無し氏, edited by 天翔記.jp"
+            VALUE "OriginalFilename", "SaveDataEditor.exe"
+            VALUE "ProductName", "天翔記 セーブデータエディタ"
+            VALUE "ProductVersion", "1.3.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "SaveDataEditor"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "終了します\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MAX_GRAIN            "全城の石高を上限値にします"
+    ID_MAX_TOWN             "全城の商業を上限値にします"
+    ID_MAX_BUILD            "全城の城郭を上限値にします"
+    ID_MAX_LOYAL            "全城の民忠を上限値にします"
+    ID_MAX_EXP              "全武将の政治・戦闘・智謀の熟練度を上限値にします"
+    ID_CALC_EXP             "全武将の政治・戦闘・智謀の熟練度を寿命を考慮して年相応のものにします"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CALC_EXP2            "全武将の政治・戦闘・智謀の熟練度を寿命を考慮して年相応のものにします(現在の値より低下することはありません)"
+    ID_YOUNG                "全武将を10歳若返らせます"
+    ID_CHANGEATTACH         "武将の所属大名家を変更します"
+    ID_SOLDIER              "全武将に標準の限界値まで兵を与えます"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SENIORITY            "年相応に出世させます"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (米国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST ""res\\\\SaveDataEditor.exe.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英語 (米国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "res\\SaveDataEditor.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
